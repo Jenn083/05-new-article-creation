@@ -65,17 +65,24 @@ articleView.setTeasers = function() {
 };
 
 articleView.initNewArticlePage = function() {
-  // TODO: Ensure the main .tab-content area is revealed. We might add more tabs later.
-
-  // TODO: The new articles we create will be copy/pasted into our source data file.
+  // Done: Ensure the main .tab-content area is revealed. We might add more tabs later.
+$('.tab-content').show();
+  // Done: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide the export field for now, and show it once we have data to export.
+$('#export-field').hide();
+  // Done: Add an event listener/handler to update the preview and the export field if any inputs change.
+$('input').on('change' function(){
 
-  // TODO: Add an event listener/handler to update the preview and the export field if any inputs change.
+ this.select()
+})
+
 };
 
 articleView.create = function() {
-  // TODO: Set up a var to hold the new article we are creating.
+  // Done: Set up a var to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
+  var newArticle;
+  $('#articles').empty().fadeIn();
 
   // TODO: Instantiate an article based on what's in the form fields:
 
